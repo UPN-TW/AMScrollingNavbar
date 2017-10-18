@@ -372,7 +372,7 @@
         if (frame.origin.y - delta > self.statusBar) {
             delta = frame.origin.y - self.statusBar;
         }
-        frame.origin.y = MIN(20, frame.origin.y - delta);
+        frame.origin.y = MIN([self statusBar], frame.origin.y - delta);
         self.navigationController.navigationBar.frame = frame;
 
         if (frame.origin.y == self.statusBar) {
