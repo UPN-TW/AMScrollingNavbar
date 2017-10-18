@@ -188,7 +188,7 @@
 }
 
 - (float)statusBar {
-    return ([[UIApplication sharedApplication] isStatusBarHidden]) ? 0 : 20;
+    return ([[UIApplication sharedApplication] isStatusBarHidden]) ? 0 : [UIApplication sharedApplication].statusBarFrame.size.height;
 }
 
 - (float)navbarHeight {
